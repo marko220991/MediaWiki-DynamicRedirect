@@ -1,0 +1,27 @@
+{
+	"name": "DynamicRedirect",
+	"version": "0.0.1",
+	"author": [
+		"Marko Ilic (gesinn.it GmbH & Co. KG)"
+	],
+	"url": "https://github.com/marko220991/MediaWiki-DynamicRedirect",
+	"description": "DynamicRedirect extension for MediaWiki. It provides redirection to a dynamically determined page",
+	"license-name": "GPL-3.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.35"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\DynamicRedirect\\": "./src/"
+	},
+	"ExtensionMessagesFiles": {
+		"DynamicRedirectAlias": "DynamicRedirect.alias.php"
+	},
+	"MessagesDirs": {
+		"DynamicRedirect": [
+			"i18n"
+		]
+	},
+	"load_composer_autoloader": true,
+	"manifest_version": 1
+}

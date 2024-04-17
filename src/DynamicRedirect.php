@@ -26,7 +26,7 @@ $wgExtensionCredits[ 'specialpage' ][] = array(
 	'version' => '0.2.0',
 );
 
-$wgAutoloadClasses[ 'SpecialDynamicRedirect' ] = __DIR__ . '/SpecialDynamicRedirect.php';
-$wgExtensionMessagesFiles[ 'DynamicRedirect' ] = __DIR__ . '/DynamicRedirect.i18n.php';
+$wgAutoloadClasses[ 'SpecialDynamicRedirect' ] = __DIR__ . '/src/SpecialDynamicRedirect.php';
+$wgExtensionMessagesFiles[ 'DynamicRedirect' ] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles[ 'DynamicRedirectAlias' ] = __DIR__ . '/DynamicRedirect.alias.php';
 $wgSpecialPages[ 'DynamicRedirect' ] = 'SpecialDynamicRedirect';

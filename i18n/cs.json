@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fannon"
+		]
+	},
+	"dynamicredirect" : "Dynamické přesměrování",
+	"dynamicredirect-desc" : "Poskytuje [[Special:DynamicRedirect|speciální stránku]] přesměrovávající na dynamicky určenou stránku",
+	"dynamicredirect-badparams" : "[[Special:DynamicRedirect|DynamicRedirect]] vyžaduje argumenty <code>mode</code> a <code>target</code>.",
+	"dynamicredirect-badmode" : "<code>mode</code> musí mít jednu z hodnot <code>parse</code>, <code>catfirst</code> a <code>catlast</code>.",
+	"dynamicredirect-nosuchtarget" : "Specifikovaná cílová stránka [[$1]] neexistuje.",
+	"dynamicredirect-mode" : "Režim výběru cílové stránky:",
+	"dynamicredirect-mode-parse" : "Zpracovat zadaný wikitext",
+	"dynamicredirect-mode-catfirst" : "První stránka v zadané kategorii",
+	"dynamicredirect-mode-catlast" : "Poslední stránka v zadané kategorii",
+	"dynamicredirect-target" : "Parametr cíle:",
+	"dynamicredirect-submit" : "Přesměrovat",
+	"dynamicredirect-badtitle" : "„$1“ není platný název stránky",
+	"dynamicredirect-emptycategory" : "Kategorie [[:$1|$1]] je prázdná nebo neexistuje"
+}
