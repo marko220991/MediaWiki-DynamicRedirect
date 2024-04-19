@@ -19,5 +19,12 @@ $specialPageAliases[ 'en' ] = array(
  * @author Mormegil
  */
 $specialPageAliases[ 'cs' ] = array(
-	'MyExtension' => array( 'DynamickéPřesměrování', 'Dynamické přesměrování', 'DynamickePresmerovani' ),
+	'DynamicRedirect' => array( 'DynamickéPřesměrování', 'Dynamické přesměrování', 'DynamickePresmerovani' ),
+);
+
+/** German
+ * @author Mormegil
+ */
+$specialPageAliases[ 'de' ] = array(
+	'DynamicRedirect' => array( 'DynamischeWeiterleitung', 'Dynamische Weiterleitung' ),
 );

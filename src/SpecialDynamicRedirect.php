@@ -1,4 +1,13 @@
 <?php
+
+namespace MediaWiki\Extension\DynamicRedirect;
+
+use Html;
+use Parser;
+use ParserOptions;
+use Xml;
+use Title;
+
 /**
  * [[Special:DynamicRedirect]] – Provide dynamically determined redirections
  *
@@ -8,8 +17,7 @@
  * @copyright © 2013 Petr Kadlec
  * @license GNU General Public Licence 2.0 or later
  */
-
-class SpecialDynamicRedirect extends IncludableSpecialPage {
+class SpecialDynamicRedirect extends \SpecialPage {
 
 	function __construct() {
 		parent::__construct( 'DynamicRedirect' );
@@ -91,7 +99,7 @@ class SpecialDynamicRedirect extends IncludableSpecialPage {
 			Html::openElement( 'form', array( 'method' => 'get', 'action' => $wgScript, 'id' => 'specialdynamicredirect' ) ) .
 			Html::openElement( 'fieldset' ) .
 			Html::element( 'legend', null, $this->msg( 'dynamicredirect' )->text() ) .
-			Html::hidden( 'title', $this->getTitle()->getPrefixedText() ) .
+			//Html::hidden( 'title', $this->getTitle()->getPrefixedText() ) .
 			Xml::label( $this->msg( 'dynamicredirect-mode' )->text(), 'dynamicredirect-mode' ) . " " .
 			Html::openElement( 'select', array( 'id' => 'dynamicredirect-mode', 'name' => 'mode' ) ) . "\n" .
 			implode( "\n", $modes ) .
@@ -108,8 +116,10 @@ class SpecialDynamicRedirect extends IncludableSpecialPage {
 		$myParser = new Parser();
 		$myParserOptions = ParserOptions::newFromUser( $wgUser );
 		$parsed = $myParser->parse( $wikiText, $wgTitle, $myParserOptions, true )->getText();
+		$splitParsed = explode("</div>", $parsed);
+		$finalParsed = explode("\">", $splitParsed[0]);
 		$m = array();
-		if ( preg_match( '/^<p>(.*)\n?<\/p>\n?/sU', $parsed, $m ) ) {
+		if ( preg_match( '/^<p>(.*)\n?<\/p>\n?/sU', $finalParsed[1], $m ) ) {
 			$parsed = $m[1];
 		}
 		$result = Title::newFromText( $parsed );

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ilic"
+		]
+	},
+	"dynamicredirect" : "Dynamische Weiterleitung",
+	"dynamicredirect-desc" : "Bietet [[Special:DynamicRedirect|eine spezielle Seite]], die auf eine dynamisch bestimmte Seite umleitet",
+	"dynamicredirect-badparams" : "[[Special:DynamicRedirect|DynamicRedirect]] benötigt <code>mode</code> und <code>target</code>.",
+	"dynamicredirect-badmode" : "<code>mode</code> muss einer von <code>parse</code>, <code>catfirst</code> oder <code>catlast</code> sein.",
+	"dynamicredirect-nosuchtarget" : "Die von Ihnen angegebene Zielseite [[$1]] existiert nicht.",
+	"dynamicredirect-mode" : "Zielauswahlmodus:",
+	"dynamicredirect-mode-parse" : "Analysieren Sie den angegebenen Wikitext",
+	"dynamicredirect-mode-catfirst" : "Die erste Seite der angegebenen Kategorie",
+	"dynamicredirect-mode-catlast" : "Die letzte Seite der angegebenen Kategorie",
+	"dynamicredirect-target" : "Zielparameter:",
+	"dynamicredirect-submit" : "Umleiten",
+	"dynamicredirect-badtitle" : "„$1“ ist kein gültiger Seitentitel",
+	"dynamicredirect-emptycategory" : "Kategorie [[:$1|$1]] ist leer oder nicht vorhanden"
+}
